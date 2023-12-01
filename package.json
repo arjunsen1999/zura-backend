@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "pre-deploy": "node deleteLastDeploy.js",
+    "deploy": "npm run pre-deploy && vercel --public && vercel alias",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=6.9"
   },
   "keywords": [],
   "author": "",
