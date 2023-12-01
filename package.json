@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "pre-deploy": "node deleteLastDeploy.js",
     "deploy": "npm run pre-deploy && vercel --public && vercel alias",
     "test": "echo \"Error: no test specified\" && exit 1"
